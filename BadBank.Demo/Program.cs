@@ -29,9 +29,9 @@ public class Program
             Thread.Sleep(1000 * frequency);
             var dir = new DirectoryInfo(inputFolder);
             var files = dir.GetFiles("*.bbtl");
+            Array.Sort(files, (FileInfo left, FileInfo right) => left.Name.CompareTo(right.Name));
             foreach (var file in files)
             {
-                Console.WriteLine($"processed file {file}");
                 var result = Processing.Process(file.ToString(), outputFolder);
                 Console.WriteLine($"processed file {file}, reported to {result}");
             }

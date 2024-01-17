@@ -32,6 +32,8 @@ Example file (`input.bbtl`):
 
 If the file `alice-bob.bbtl` is put into the `INPUT` folder, its processing will start after `FREQUENCY` seconds the latest. If multiple files are put into the `INPUT` folder, they will be processed in alphabetical order (case-sensitive).
 
+**Input files will be deleted after processing!** So better create a backup for them while testing.
+
 The result will be published as `alice-bob.bbrf` (_BadBank Reporting Format_) in the `OUTPUT` folder:
 
     Alice 55.00
