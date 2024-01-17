@@ -1,0 +1,6 @@
+open Alice
+deposit 100 to Alice
+open Bob
+send 25 from Alice to Bob
+withdraw 15 from Bob
+withdraw 20 from Alice

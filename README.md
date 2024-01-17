@@ -52,7 +52,7 @@ The result will be published as `alice-bob.bbrf` (_BadBank Reporting Format_) in
     - **pre-condition**: both `ACCOUNT_A` and `ACCOUNT_B` exist; `AMOUNT` must be positive (`> 0.0`)
     - **post-condition**: balance of `ACCOUNT_A` decreased, balance of `ACCOUNT_B` increased by `AMOUNT`
     - **Note**: _no_ balance check is performed (balance can become negative)
-- `deposit AMOUNT for ACCOUNT`
+- `deposit AMOUNT to ACCOUNT`
     - **semantics**: deposit the amount `AMOUNT` for `ACCOUNT`
     - **pre-condition**: an account of name `ACCOUNT` exists
     - **post-condition**: balance of `ACCOUNT` increased by `AMOUNT`

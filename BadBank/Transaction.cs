@@ -2,7 +2,19 @@ using System.Data;
 
 namespace BadBank;
 
-public interface Transaction
+public abstract class Transaction
 {
-    public void Apply(IDictionary<string, double> accounts);
+    private string line;
+
+    public Transaction(string line)
+    {
+        this.line = line;
+    }
+
+    public abstract void Apply(IDictionary<string, double> accounts);
+
+    public override string ToString()
+    {
+        return line;
+    }
 }
