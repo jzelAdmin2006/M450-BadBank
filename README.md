@@ -41,7 +41,7 @@ The result will be published as `alice-bob.bbrf` (_BadBank Reporting Format_) in
 
 ## BadBank Transaction Language
 
-See examples in `data/input-examples`:
+The following commands are supported:
 
 - `open ACCOUNT`
     - **semantics**: open the account with name `ACCOUNT`
@@ -65,9 +65,11 @@ See examples in `data/input-examples`:
     - **pre-condition**: an account of name `ACCOUNT` exists
     - **post-condition**: balance of `ACCOUNT` decreased by `AMOUNT`; balance of `ACCOUNT` must be `>= AMOUNT`
 
-## BadBank Reporting Format
+See examples in `data/input-examples`.
 
-See examples in `data/output-examples`:
+## BadBank Reporting Format
 
 - `ACCOUNT AMOUNT`
     - the account `ACCOUNT` has the given `AMOUNT` (formatted as a floating-point number with two fraction digits, e.g. `165.29`)
+
+See examples in `data/output-examples`:
