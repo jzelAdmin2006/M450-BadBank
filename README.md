@@ -67,5 +67,3 @@ The result will be published as `alice-bob.bbrf` (_BadBank Reporting Format_) in
 
 - `ACCOUNT AMOUNT`
     - the account `ACCOUNT` has the given `AMOUNT` (formatted as a floating-point number with two fraction digits, e.g. `165.29`)
-- `error "COMMAND": MESSAGE`
-    - the given `COMMAND` could not be processed (invalid format; violation of a condition) for the reason denoted in `MESSAGE`

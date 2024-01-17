@@ -1,26 +1,29 @@
 using System.Text;
+using System.Xml.XPath;
 
 namespace BadBank;
 
 public class Processing
 {
-    public static string Process(string bbtlFilePath, string outputFolderPath)
+    public static string Process(IDictionary<string, double> accounts, string bbtlFilePath, string outputFolderPath)
     {
-        var accounts = new Dictionary<string, double>();
-        var transactions = ParseFile(bbtlFilePath);
-        foreach (var transaction in transactions)
+        var result = new StringBuilder();
+        foreach (var transaction in ParseFile(bbtlFilePath))
         {
-            // FIXME: surround with try/catch; report error to .bbrf file!
             transaction.Apply(accounts);
         }
-        var result = new StringBuilder();
         foreach (var account in accounts.Keys)
         {
             var balance = accounts[account];
             result.AppendLine($"{account} {balance:0.00}");
         }
-        var bbtlFile = new FileInfo(bbtlFilePath);
-        var outputFilePath = Path.Combine(outputFolderPath, bbtlFile.Name.Replace(".bbtl", ".bbrf"));
+        return OutputResult(bbtlFilePath, result.ToString(), outputFolderPath);
+    }
+
+    private static string OutputResult(string inFile, string result, string outDir)
+    {
+        var bbtlFile = new FileInfo(inFile);
+        var outputFilePath = Path.Combine(outDir, bbtlFile.Name.Replace(".bbtl", ".bbrf"));
         var outputFile = File.OpenWrite(outputFilePath);
         var writer = new StreamWriter(outputFile);
         writer.Write(result);
@@ -35,12 +38,17 @@ public class Processing
         var fileStream = File.OpenRead(bbtlFilePath);
         var reader = new StreamReader(fileStream, Encoding.UTF8);
         string? line;
+        var lines = new List<string>();
         while ((line = reader.ReadLine()) != null)
         {
             var trimmed = line.Trim();
-            transactions.Add(ParseLine(trimmed));
+            lines.Add(trimmed);
         }
         fileStream.Close();
+        foreach (var command in lines)
+        {
+            transactions.Add(ParseLine(command));
+        }
         return transactions;
     }
 

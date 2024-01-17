@@ -24,6 +24,7 @@ public class Program
             return;
         }
 
+        var accounts = new Dictionary<string, double>();
         while (true)
         {
             Thread.Sleep(1000 * frequency);
@@ -32,7 +33,7 @@ public class Program
             Array.Sort(files, (FileInfo left, FileInfo right) => left.Name.CompareTo(right.Name));
             foreach (var file in files)
             {
-                var result = Processing.Process(file.ToString(), outputFolder);
+                var result = Processing.Process(accounts, file.ToString(), outputFolder);
                 Console.WriteLine($"processed file {file}, reported to {result}");
             }
         }

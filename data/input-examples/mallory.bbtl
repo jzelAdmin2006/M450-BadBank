@@ -1,0 +1,3 @@
+open Mallory
+send 5 from Alice to Mallory
+send 10 from Bob to Mallory

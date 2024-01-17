@@ -1,0 +1,5 @@
+open Zak
+deposit 999 to Zak
+send 100 from Zak to Alice
+send 150 from Zak to Bob
+send 0.99 from Zak to Mallory
