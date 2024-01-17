@@ -10,6 +10,7 @@ public class Processing
         var transactions = ParseFile(bbtlFilePath);
         foreach (var transaction in transactions)
         {
+            // FIXME: surround with try/catch; report error to .bbrf file!
             transaction.Apply(accounts);
         }
         var result = new StringBuilder();
