@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadBank", "BadBank\BadBank.csproj", "{36477030-EABE-40E9-9269-5E47646AB1A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadBank.Demo", "BadBank.Demo\BadBank.Demo.csproj", "{A65930D1-BE03-4EB6-8348-FC51BE9BF5E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadBank.Test", "BadBank.Test\BadBank.Test.csproj", "{00826B87-759A-4884-A3B8-CD79C58C3B8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36477030-EABE-40E9-9269-5E47646AB1A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36477030-EABE-40E9-9269-5E47646AB1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36477030-EABE-40E9-9269-5E47646AB1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36477030-EABE-40E9-9269-5E47646AB1A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A65930D1-BE03-4EB6-8348-FC51BE9BF5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A65930D1-BE03-4EB6-8348-FC51BE9BF5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A65930D1-BE03-4EB6-8348-FC51BE9BF5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A65930D1-BE03-4EB6-8348-FC51BE9BF5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00826B87-759A-4884-A3B8-CD79C58C3B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00826B87-759A-4884-A3B8-CD79C58C3B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00826B87-759A-4884-A3B8-CD79C58C3B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00826B87-759A-4884-A3B8-CD79C58C3B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
