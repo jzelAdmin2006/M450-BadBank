@@ -39,7 +39,7 @@ The result will be published as `alice-bob.bbrf` (_BadBank Reporting Format_) in
     Alice 55.00
     Bob 10.00
 
-## BadBank Transaction Language
+## BadBank Transaction Language (BBTL)
 
 The following commands are supported:
 
@@ -67,7 +67,7 @@ The following commands are supported:
 
 See examples in `data/input-examples`.
 
-## BadBank Reporting Format
+## BadBank Reporting Format (BBRF)
 
 - `ACCOUNT AMOUNT`
     - the account `ACCOUNT` has the given `AMOUNT` (formatted as a floating-point number with two fraction digits, e.g. `165.29`)
