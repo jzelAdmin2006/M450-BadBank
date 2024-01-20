@@ -1,0 +1,4 @@
+open MyWallet
+open TheirWallet
+deposit 1.50 to MyWallet
+send 1.50 from MyWallet to TheirWallet
