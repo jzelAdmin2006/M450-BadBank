@@ -1,0 +1,6 @@
+open MyWallet
+open TheirWallet
+deposit 30.50 to TheirWallet
+send 30.00 from TheirWallet to MyWallet
+withdraw 29.75 from MyWallet
+close TheirWallet
