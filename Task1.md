@@ -1,0 +1,38 @@
+# Aufgabe 1
+
+- `open ACCOUNT`
+	- **Würde z.B. funktionieren, wenn...**
+		- **Zustand**: Es gibt noch keine Accounts.
+		- **Befehl**: `open MyWallet`
+	- **Würde z.B. scheitern, wenn...**
+		- **Zustand**: Es gibt einen Account "MyWallet".
+		- **Befehl**: `open MyWallet`
+- `close ACCOUNT`
+	- **Würde z.B. funktionieren, wenn...**
+		- **Zustand**: Es gibt einen Account "MyWallet".
+		- **Befehl**: `close MyWallet`
+	- **Würde z.B. scheitern, wenn...**
+		- **Zustand**: Es gibt noch keine Accounts.
+		- **Befehl**: `close MyWallet`
+- `send AMOUNT from ACCOUNT_A to ACCOUNT_B`
+	- **Würde z.B. funktionieren, wenn...**
+		- **Zustand**: Es gibt die Accounts "MyWallet" und "TheirWallet".
+		- **Befehl**: `send 3.00 from MyWallet to TheirWallet`
+	- **Würde z.B. scheitern, wenn...**
+		- **Zustand**: Es gibt noch keine Accounts.
+		- **Befehl**: `send 3.00 from MyWallet to TheirWallet`
+- `deposit AMOUNT to ACCOUNT`
+	- **Würde z.B. funktionieren, wenn...**
+		- **Zustand**: Es gibt einen Account "MyWallet".
+		- **Befehl**: `deposit 5.00 to MyWallet`
+	- **Würde z.B. scheitern, wenn...**
+		- **Zustand**: Es gibt noch keine Accounts.
+		- **Befehl**: `deposit 5.00 to MyWallet`
+- `withdraw AMOUNT from ACCOUNT`
+	- **Würde z.B. funktionieren, wenn...**
+		- **Zustand**: Es gibt einen Account "MyWallet" mit Balance 10.00.
+		- **Befehl**: `withdraw 7.00 from MyWallet`
+	- **Würde z.B. scheitern, wenn...**
+		- **Zustand**: Es gibt einen Account "MyWallet" mit Balance 6.00.
+		- **Befehl**: `withdraw 7.00 from MyWallet`
+    
